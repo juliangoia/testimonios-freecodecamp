@@ -1,0 +1,52 @@
+/* Le asigno el estilo al componente testimonio.*/
+
+.contenedor-testimonio {
+  width: 1170px;
+  height: 368px;
+  margin: 10px 10px 50px;
+  display: flex; /* Para definir como se van a ubicar los distintos elementos dentro del contenedor*/
+  align-items: center; /* Para que se alinien en el centro. */
+  justify-content: center; /* Para centrarlos horizontalmente. Entonces, esta linea y la anterior seria para centrarlos verticalmente y horizontalmente. */
+  background-color: #ffffff;
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%); /* Para asignarle una sombra a la caja. Primero los px para establecer la forma de la sombra y luego el color*/
+}
+
+/*Le asigno estilo a la imagen del testimonio*/
+
+.imagen-testimonio {
+  height: 100%; /*Para que tenga una altura de forma que cubra todo el contenedor*/
+  width: auto; /*Le pongo un ancho automatico, porque las imagenes que tenemos tienen las mismas dimensiones. Sino capaz seria mejor asignar un ancho fijo*/
+}
+
+/*Le asigno estilo al contenedor del texto*/
+
+.contenedor-texto-testimonio {
+  width: 100%;
+  font-size: 18px; /*Al font-size y al width podriamos no incluirlos porque este elemento hereda esa caracteristica de su contenedor.*/
+  text-align: center; 
+  padding: 40px;
+  font-family: Lato, sans-serif;
+  font-weight: 400; /*Le puse 400 para que la letra sea un poco mas delgada que el del titulo*/
+  line-height: 1.5rem; /*Para separar un poco las lineas. La unidad rem es una unidad relativa a la medida de la fuente del elemento raíz (es decir, la etiqueta <html>). Por ejemplo, si la medida de la fuente del elemento raíz es de 16px, entonces 1rem sería igual a 16px.*/  
+}
+
+/*Le asigno estilo al nombre de la persona del testimonio*/
+
+.nombre-testimonio {
+  font-size: 1.3rem;
+}
+
+/*Le asigno estilo al cargo de la persona del testimonio*/
+
+.cargo-testimonio {
+  font-size: 1.3rem;
+  margin-top: 15px; /*Le asigno un margen superior para separarlo de la linea del nombre-testimonio*/
+  padding-bottom: 30px;
+}
+
+/*Le asigno estilo al texto del testimonio*/
+
+.texto-testimonio {
+  font-size: 1.1rem;
+  text-align: justify;
+}

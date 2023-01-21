@@ -1,38 +1,54 @@
+/* 
+El simbolo * es un selector universal, es decir va a aplicar a todos los elementos de la pagina web.
+Le pongo un margin y un padding 0 porque los navegadores tienen hojas de estilos predeterminadas y 
+aveces a algunos elementos le asignan un margin y padding.
+*/
+
+* {
+  margin: 0; /*El margen se utiliza para separar un elemento de otros elementos en una página.*/
+  padding: 0; /*El padding se utiliza para crear espacio entre el contenido de un elemento y sus bordes (seria por dentro)*/
+}
+
+/*
+ Despues para HTML y body, le asigno un tamaño de letra, por defecto le colocamos 18 px para todos los elementos.
+ Tambien le agregue un color de fondo
+ */
+html,
+body {
+  font-size: 18px; /*Tamaño de letra*/
+  background-color: #f5f6f7; /*Color del fondo de la pagina*/
+}
+
+/*
+ Como tenemos un solo elemento de h1, podemos usar un selector de tipo h1.
+ Entonces le asigno algunos estilos, como el ancho, tamaño de letra, tipo de letra.
+ Con el 2.5em es como un factor relativo al tamaño de la letra de su contenedor. Si por ejemplo el tamaño es de 10px, entonces 
+ si luego le asigno 2.5em el tamaño va a ser 2.5 veces 10px.
+ */
+h1 {
+  max-width: 940px; /*Ancho*/
+  font-size: 2.5em; /*Tamaño de letra*/
+  font-family: Lato, sans-serif; /* Tipo de letra. Le paso dos valores, si el navegador no admite el tipo Lato, utilizará sans-serif*/
+  font-weight: 700; /* Para hacer la letra un poco mas gruesa */
+  line-height: 1.1; /* Le asigno una altura de la linea, para que haya una separacion*/
+  margin: 40px 0; /* Le asigno un margen, primero el superior e inferior y luego el derecho e izquierdo*/
+}
+
+/*Asigno algunos estilos a toda la app. Seria al div q contiene toda la aplicacion.*/
 .App {
-  text-align: center;
+  min-height: 100vh; /*La altula minima va a ser la de la pantalla verticalmente*/
+  display: flex; /* Para definir como se van a ubicar los distintos elementos dentro del contenedor*/
+  flex-wrap: wrap; /* Significa que si un elemento toma todo el ancho del contenedor, los otros elementos van a ubicarse en la siguiente linea o debajo de él.*/
+  align-items: center; /* Para que se alinien en el centro. */
+  justify-content: center; /* Para centrarlos horizontalmente. Entonces, esta linea y la anterior seria para centrarlos verticalmente y horizontalmente. */
+  text-align: center; /* Para que el texto tambien se center*/
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*Asigno algunos estilos al contenedor principal */
+.contenedor-principal {
+  min-height: 600px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
